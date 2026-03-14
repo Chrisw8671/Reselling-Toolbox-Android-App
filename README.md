@@ -11,7 +11,7 @@ Edit this file:
 Change:
 
 ```xml
-<string name="web_app_url">https://example.com</string>
+<string name="web_app_url">https://100.92.48.58:3000/mobile</string>
 ```
 
 to your real site, for example:
