@@ -80,3 +80,19 @@ Release output is typically under:
 - Internet permission is already enabled in `AndroidManifest.xml`.
 - JavaScript and DOM storage are already enabled in `MainActivity`.
 - Android back button goes back in webpage history before closing the app.
+
+## Troubleshooting Gradle sync in Android Studio
+
+If sync hangs/fails:
+
+1. **Use JDK 17 in Android Studio**
+   - `File > Settings > Build, Execution, Deployment > Build Tools > Gradle`
+   - Set **Gradle JDK** to **Embedded JDK (17)** or any installed JDK 17.
+2. **Disable Gradle Offline mode**
+   - In the Gradle tool window, make sure Offline mode is OFF.
+3. **Re-sync after repository fix**
+   - This project now declares required repositories (`google()`, `mavenCentral()`, `gradlePluginPortal()`) in `settings.gradle.kts`.
+4. **Try clean sync**
+   - `File > Invalidate Caches / Restart` then sync again.
+
+If it still fails, open **Build** output and copy the first red error line.
